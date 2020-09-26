@@ -9,7 +9,7 @@ The main results are presented in *xcf.ipynb*.
 
 *xcf_nontSZ.ipynb* presents the result using the tSZ-free CMB lensing map.
 
-*Null_test.ipynb* and *Mock_null_test.ipynb*shows the null test result.
+*Null_test.ipynb* and *Mock_null_test.ipynb* shows the null test result.
 
 *pipeline_rw.py* is the pipeline file.
 
