@@ -111,17 +111,17 @@ ell_qq, Cqq = model.Cqq(b=bias,x=range(1200),line=True)
 
 for i in range(200):
     re_spec = mock_spectrum(Ckk,Ckq,Cqq,bias=bias,fwhm_list=kernel_size)
-    l_mk,cl_mk = bin_corr(Ckq)
-    uniform_model.append(cl_mk)
-    uniform_l.append(l_mk)
+    #l_mk,cl_mk = bin_corr(Ckq)
+    uniform_model.append(Ckq)
+    #uniform_l.append(l_mk)
     for j,spec in enumerate(re_spec):
-        l_re,cl_re = bin_corr(spec)
-        uniform_cl[j].append(cl_re)
+        #l_re,cl_re = bin_corr(spec)
+        uniform_cl[j].append(spec)
     print('uniform:%d finished'%i)
 
-np.save('cl_new.npy',np.array(uniform_cl))
-np.save('l_new.npy',np.array(uniform_l))
-np.save('model_new.npy',np.array(uniform_model))
+np.save('cl_full.npy',np.array(uniform_cl))
+#np.save('l.npy',np.array(uniform_l))
+np.save('model_full.npy',np.array(uniform_model))
 
 
 
